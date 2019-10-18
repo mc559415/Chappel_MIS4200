@@ -9,19 +9,32 @@
 
 <div class="row">
     <div class="col-md-4">
-        <h2>Pets</h2>
+        <h2>Pets<span class="glyphicon glyphicon-piggy-bank"></span></h2>
         <p>
-            I have 3 dogs at home. Two cockapoos and one poodle. We also have a very a large cat, my sister has 2 bunnies and my brother has a bearded dragon.
+            I have 3 dogs at home. Two cockapoos and one poodle. We also have a very a large cat, my sister has 2 bunnies and my brother has a bearded dragon.  <br />
+
+
+            <div class="dropdown">
+                 <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Pets, Vets, Apts
+                 <span class="caret"></span></button>
+                 <ul class="dropdown-menu">
+                     <li>@Html.ActionLink("Pets", "Index", "Pets")</li>
+                     <li>@Html.ActionLink("Vets", "Index", "Vets")</li>
+                     <li>@Html.ActionLink("Appointments", "Index", "Appointments")</li>
+                 </ul>
+            </div>
+
+
         </p>
     </div>
     <div class="col-md-4">
-        <h2>ISAP</h2>
+        <h2>ISAP<span class="glyphicon glyphicon-list-alt"></span></h2>
         <p>ISAP is a student organization that I am currently involved with. We have a different company come speak to us every wednesday night
         and give us professional development tips as well as talk about open job positions. I credit this organization with getting me my internship and introducing me to all of 
         the best companies that recruit. </p>
     </div>
     <div class="col-md-4">
-        <h2>Chicken Parmesan</h2>
+        <h2>Chicken Parmesan<span class="glyphicon glyphicon-ice-lolly-tasted"></span></h2>
         <p>My favorite food in the world is Chicken Parmesan. I love going to authentic italian restaurants and ordering their chicken parmesan to 
         see what their unique take on the dish is.</p>
         <p><a class="btn btn-default" href="https://www.allrecipes.com/recipe/223042/chicken-parmesan/">Chicken Parm &raquo;</a></p>

@@ -1,0 +1,42 @@
+﻿@model Chappel_MIS4200.Models.Vet
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Vet</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.vetName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.vetName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.vetPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.vetPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.vetEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.vetEmail)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.vetID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Chappel_MIS4200.Models.Appointment>
+
+@{
+    ViewBag.Title = "Index";
+    <div class="well"> This is where you can book or look at existing appointments.</div>
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Vet.vetName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.appointmentDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.petID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vet.vetName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.appointmentDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.petID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.AppointmentID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.AppointmentID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.AppointmentID })
+        </td>
+    </tr>
+}
+
+</table>
